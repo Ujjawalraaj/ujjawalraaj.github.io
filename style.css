@@ -1337,6 +1337,17 @@ img {
     gap: 24px;
 }
 
+/* 5th card (Problem Solving) spans full width */
+.skill-category:last-child {
+    grid-column: 1 / -1;
+}
+
+.skill-category:last-child .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .skill-category {
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
