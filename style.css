@@ -381,7 +381,7 @@ img {
     z-index: 1;
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 28px 2rem 0;
+    padding: 60px 2rem 0;
     width: 100%;
     will-change: transform, opacity;
 }
@@ -535,8 +535,8 @@ img {
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
-    bottom: 40px;
-    right: 48px;
+    bottom: 10px;
+    right: 24px;
     left: auto;
     transform: none;
     display: flex;
