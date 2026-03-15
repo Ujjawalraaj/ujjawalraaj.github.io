@@ -864,6 +864,20 @@ img {
     }
 }
 
+/* Experience mobile — compact layout */
+@media (max-width: 768px) {
+    .case-study-grid { grid-template-columns: 1fr; }
+    .case-study-content { padding: 16px; }
+    .decision-item { margin-bottom: 12px; }
+    .decision-item p { font-size: 0.82rem; line-height: 1.5; }
+    .timeline-achievements { gap: 10px; }
+    .timeline-achievements li { font-size: 0.84rem; }
+    .timeline-tech { gap: 6px; }
+    .tech-tag { font-size: 0.7rem; padding: 5px 10px; }
+    .flow-step { min-width: 80px; padding: 10px 8px; }
+    .flow-label { font-size: 0.63rem; }
+}
+
 /* ---------- Experience Section ---------- */
 .experience {
     background: var(--bg-secondary);
@@ -1864,7 +1878,12 @@ body:not(.keyboard-nav) *:focus { outline: none; }
     .architecture-flow { padding: 16px; }
     .flow-step { min-width: 70px; padding: 10px; }
     .flow-label { font-size: 0.6rem; }
-    .case-study-content { padding: 16px; }
+    .case-study-content { padding: 12px; }
+    .timeline-content { padding: 16px; }
+    .timeline-role { font-size: 1rem; }
+    .timeline-achievements li { font-size: 0.78rem; line-height: 1.5; }
+    .decision-item p { font-size: 0.76rem; }
+    .decision-item strong { font-size: 0.82rem; }
 
     /* Certifications */
     .cert-card { padding: 16px; gap: 12px; }

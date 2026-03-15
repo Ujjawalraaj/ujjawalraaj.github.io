@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 4. Hero parallax (desktop only — disabled on mobile to prevent early fade)
         if (heroContent && scrollY < window.innerHeight && window.innerWidth > 768) {
-            heroContent.style.transform = `translate3d(0, ${scrollY * 0.3}px, 0)`;
+            heroContent.style.transform = `translate3d(0, ${scrollY * -0.08}px, 0)`;
             heroContent.style.opacity = 1 - (scrollY / window.innerHeight) * 0.8;
         } else if (heroContent && window.innerWidth <= 768) {
             heroContent.style.transform = '';
