@@ -1861,6 +1861,9 @@ body:not(.keyboard-nav) *:focus { outline: none; }
     .stat-number { font-size: 1.6rem; }
     .hero-name { letter-spacing: -1px; }
 
+    /* Hide scroll indicator on small phones — stacked stats leave no room */
+    .scroll-indicator { display: none; }
+
     /* Section spacing */
     .section { padding: 80px 0; }
     .section-header { margin-bottom: 50px; }
