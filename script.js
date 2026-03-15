@@ -85,11 +85,25 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
     });
 
-    document.querySelectorAll('.mobile-nav-link, .mobile-menu-cta .btn').forEach(link => {
-        link.addEventListener('click', () => {
+    document.querySelectorAll('.mobile-nav-link, .mobile-menu-cta a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            // Always close the menu first
             hamburger.classList.remove('active');
             mobileMenu.classList.remove('active');
             document.body.style.overflow = 'auto';
+            // For hash links: take over navigation so smooth-scroll handler doesn't conflict
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                e.stopImmediatePropagation(); // stop smooth-scroll handler firing twice
+                const target = document.querySelector(href);
+                if (target) {
+                    setTimeout(() => {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 10);
+                }
+            }
+            // Non-hash links (Resume download) fall through to default browser action
         });
     });
 

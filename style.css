@@ -374,7 +374,7 @@ img {
     .hero-content { padding: 40px 1.25rem 0; }
     .hero-buttons { flex-direction: column; gap: 12px; }
     .hero-buttons .btn { width: 100%; justify-content: center; }
-    .scroll-indicator { display: none; }
+    /* scroll-indicator kept visible — already pinned to bottom:10px right:24px */
 
     /* Contact */
     .contact-card:hover { transform: none; }
