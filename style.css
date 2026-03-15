@@ -364,6 +364,45 @@ img {
     .nav-links, .nav-cta { display: none; }
     .hamburger { display: flex; }
     .mobile-menu { display: flex; }
+
+    /* Section spacing */
+    .section { padding: 90px 0; }
+    .section-header { margin-bottom: 60px; }
+    .container { padding: 0 1.25rem; }
+
+    /* Hero */
+    .hero-content { padding: 40px 1.25rem 0; }
+    .hero-buttons { flex-direction: column; gap: 12px; }
+    .hero-buttons .btn { width: 100%; justify-content: center; }
+    .scroll-indicator { display: none; }
+
+    /* Contact */
+    .contact-card:hover { transform: none; }
+    .btn-submit { width: 100%; justify-content: center; }
+
+    /* Skills */
+    .skill-category { padding: 24px; }
+    .skill-category:last-child { grid-column: 1; }
+
+    /* Projects grid fix - moved up from 600px to prevent overflow */
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: 1; }
+
+    /* Mobile menu CTAs */
+    .mobile-menu-cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 40px;
+        padding-top: 32px;
+        border-top: 1px solid var(--border-subtle);
+        width: 100%;
+    }
+    .mobile-menu-cta .btn {
+        width: 220px;
+        justify-content: center;
+    }
 }
 
 /* ---------- Hero Section ---------- */
@@ -750,6 +789,15 @@ img {
         max-width: 300px;
         margin: 0 auto;
     }
+    .image-border {
+        inset: 12px -12px -12px 12px;
+    }
+    .image-dots {
+        bottom: -20px;
+        right: -20px;
+        width: 80px;
+        height: 80px;
+    }
 }
 
 /* ---------- Why Teams Want Me ---------- */
@@ -810,6 +858,9 @@ img {
 @media (max-width: 768px) {
     .approach-grid {
         grid-template-columns: 1fr;
+    }
+    .approach-card {
+        padding: 28px;
     }
 }
 
@@ -1061,9 +1112,11 @@ img {
 
 @media (max-width: 600px) {
     .timeline-marker { display: none; }
+    .timeline-item { gap: 0; }
     .timeline-content { padding: 24px; }
     .timeline-header { flex-direction: column; }
     .timeline-meta { text-align: left; }
+    .timeline-role { font-size: 1.15rem; }
 }
 
 /* ---------- Case Study ---------- */
@@ -1315,15 +1368,19 @@ img {
 }
 
 @media (max-width: 600px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-    .project-card.featured {
-        grid-column: 1;
-    }
     .impact-metrics {
         flex-direction: column;
         gap: 20px;
+    }
+    .project-card.featured .project-card-inner {
+        padding: 28px;
+    }
+    .project-cta-row .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .project-metrics {
+        gap: 12px;
     }
 }
 
@@ -1642,6 +1699,10 @@ img {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+    .btn-submit {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* ---------- Footer ---------- */
@@ -1777,22 +1838,41 @@ body:not(.keyboard-nav) *:focus { outline: none; }
 
 /* ---------- Additional Responsive ---------- */
 @media (max-width: 480px) {
-    .hero-stats {
-        gap: 20px;
-    }
-    .stat-number {
-        font-size: 1.6rem;
-    }
-    .hero-name {
-        letter-spacing: -1px;
-    }
-    .section {
-        padding: 80px 0;
-    }
-    .section-header {
-        margin-bottom: 50px;
-    }
-    .about-details {
-        grid-template-columns: 1fr;
-    }
+    .container { padding: 0 1rem; }
+
+    /* Hero stats */
+    .hero-stats { flex-wrap: wrap; justify-content: center; gap: 16px 20px; }
+    .stat-divider { display: none; }
+    .stat { min-width: 80px; }
+    .stat-number { font-size: 1.6rem; }
+    .hero-name { letter-spacing: -1px; }
+
+    /* Section spacing */
+    .section { padding: 80px 0; }
+    .section-header { margin-bottom: 50px; }
+
+    /* About */
+    .about-details { grid-template-columns: 1fr; }
+    .image-border { display: none; }
+    .image-dots { display: none; }
+
+    /* Approach */
+    .approach-card { padding: 24px; }
+    .approach-number { font-size: 2.2rem; }
+
+    /* Experience */
+    .architecture-flow { padding: 16px; }
+    .flow-step { min-width: 70px; padding: 10px; }
+    .flow-label { font-size: 0.6rem; }
+    .case-study-content { padding: 16px; }
+
+    /* Certifications */
+    .cert-card { padding: 16px; gap: 12px; }
+    .cert-icon { width: 40px; height: 40px; flex-shrink: 0; }
+
+    /* Contact */
+    .contact-card { padding: 16px; gap: 12px; }
+
+    /* Footer */
+    .footer { padding: 28px 0; }
 }
